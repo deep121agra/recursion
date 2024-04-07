@@ -1,0 +1,30 @@
+//fabonachi number problem
+public int fib(int n) {
+        if(n<=1){
+            return n;
+        }
+        else{
+            return fib(n-1)+ fib(n-2);
+        }
+
+# n stairs problem
+  class Solution(object):
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n <=1:
+            return 1
+        else:
+            return self.climbStairs(n-1)+self.climbStairs(n-2)   
+
+# write a program to find a hcf of a given number
+def hef(a,b):
+  if b==0:
+        return a
+  else:
+          return hef(b,a%b)
+          
+
+          
