@@ -1,0 +1,31 @@
+# write a program of a factonial of a given number using recursion in python
+def fact(n):
+    if n<=1:
+        return 1
+    else:
+        return n*fact(n-1)
+
+
+# write a program to add a n numbers
+def sum1(n):
+    if n == 0:
+        return 0
+    else:
+        return sum1(n-1)+n
+print(sum1(10)) 
+
+# write a program to add power of number using recursion
+def pow1(n,x):
+    if x <=0:
+        return 1
+    else:
+        return pow1(n,x-1)*n
+
+# write a progaram of sum of squares of a n numbers
+def squares(n):
+    if n<=1:
+        return 1
+    else:
+        return squares(n-1)+(n*n)
+        
+        
