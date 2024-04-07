@@ -1,0 +1,52 @@
+# program to add all number using recursion
+def sum1(n):
+    if n == 0:
+        return 0
+    else:
+        return sum1(n-1)+n
+print(sum1(10)) 
+
+
+# program to get binary number recursion
+def binar(n):
+    if n == 0:
+        return '0'
+    else:
+        return binar(n // 2) + str(n % 2)
+
+a = binar(5)
+print(a)
+# program to print a number from one to n
+def ton(n):
+    if n==0:
+        return 0
+    else:
+        ton(n-1)
+        print(n)
+ton(5) 
+
+# program to print a number from n to one
+def ton(n):
+    if n == 0:
+        return 0
+    else:
+        print(n)
+        ton(n - 1)
+        
+
+# Example usage:
+ton(5)
+
+
+# program to print a even number from one to n 
+def ton(n):
+    if n > 10:
+        return 0
+    else:
+        
+        ton(n + 2)
+        print(n)
+
+# Example usage:
+ton(0)
+    
