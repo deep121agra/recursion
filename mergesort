@@ -1,0 +1,40 @@
+#User function Template for python3
+
+class Solution:
+    def merge(self,arr, l, m, r): 
+        # code here
+        lst=[0]*(r-l+1)
+        left=l
+        right=m+1
+        index=0
+        while left<=m and right<=r:     # for a write and a left aray
+            if arr[left]<=arr[right]:
+                lst[index]=arr[left]
+                index+=1
+                left+=1
+            else:
+                lst[index]=arr[right]
+                right+=1
+                index+=1
+        while left<=m:                        # for a left side of array if left side is remaning
+            lst[index]=arr[left]
+            index+=1
+            left+=1
+        while right<=r:                      # for a right side of a array in rigtt is remaning
+            lst[index]=arr[right]
+            index+=1
+            right+=1
+        index=0
+        while l<=r:                            # for swap a main array
+            arr[l]=lst[index]
+            index+=1
+            l+=1
+    def mergeSort(self,arr, l, r):
+        #code here
+        if l>=r:
+            return 
+        mid=(l+r)//2
+        self.mergeSort(arr,l,mid)              # for a left call
+        self.mergeSort(arr,mid+1,r)            # for a right call
+        self.merge(arr,l,mid,r)                 # for a merge a array
+
