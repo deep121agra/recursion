@@ -1,0 +1,13 @@
+def subsequence(arr, indx, n, main, temp):
+    if indx == n:
+        main.append(temp[:])  # Append a copy of temp
+        return
+    subsequence(arr, indx + 1, n, main, temp)  # not included
+    temp.append(arr[indx])
+    subsequence(arr, indx + 1, n, main, temp[:])  # pass a copy of temp
+
+arr = [1, 2, 3, 4, 5]
+temp = []
+main = []
+subsequence(arr, 0, len(arr), main, temp)
+print(main)
