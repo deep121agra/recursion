@@ -1,0 +1,15 @@
+# User function Template for python3
+
+class Solution:
+    def toh(self, N, fromm, to, aux):
+        # Your code here
+        
+        if(N == 1):
+            print("move disk " + str(N) + " from rod " + str(fromm) + " to rod " + str(to))
+            return 1
+        moves = 0
+        moves += self.toh(N - 1, fromm, aux, to)
+        moves += 1 
+        print("move disk " + str(N) + " from rod " + str(fromm) + " to rod " + str(to))
+        moves += self.toh(N - 1, aux, to, fromm)
+        return moves
