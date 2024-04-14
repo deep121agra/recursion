@@ -1,0 +1,11 @@
+# subset  sum
+# time complexity is 2 ^n
+def target(arr,idx,n,target1):
+    if target1 ==0:    # it is for check if it is present then it return 1
+        return 1
+    if idx==n or target1<0: #if it is not present then it is return 0
+        return 0
+        
+    return target(arr,idx+1,n,target1) or target(arr,idx+1,n,target1-arr[idx])
+arr=[1,2,3,4,5]
+target(arr,0,5,2)
